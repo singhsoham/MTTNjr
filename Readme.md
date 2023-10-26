@@ -1,7 +1,4 @@
-# My First week at MTTN
+#MTTN Jr.
+A platform where students can discover and register for workshops and events.
 
-This is my first git commit
-
-## Subheader
-
-More text
+And a Calendar to keep track of all the workshops and Events in a tabular format

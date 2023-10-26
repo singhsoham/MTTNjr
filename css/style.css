@@ -1,0 +1,81 @@
+a{
+    text-decoration: None;
+    color: white;
+}
+/*#home{
+    list-style-image: url('../images/MTTN\ Jr\ Main\ Logo.png');
+}-->*/
+.clr{
+    clear:both;
+}
+
+body{
+    padding-right:none;
+    align-content: center;
+    color: white;
+}
+
+.button{
+    text-align:justify;
+    margin: auto;
+    font-size: 30px;
+    padding: 20px;
+
+}
+
+.button:hover {  
+    background-color: rgb(83, 77, 77);
+    border-radius: 1px;
+    padding: 4px;
+
+}
+.intro{
+    color: white;
+    border:1px white solid;
+    padding: 10px;
+    padding-right: 0%;
+    border-radius:12px;
+    text-align: center;
+    background-color:rgb(37, 37, 39);
+    width: 85%;
+
+}
+.intro h2{
+    text-align: center;
+    
+}
+.workshop{
+    color: white;
+    width: 85%;
+    margin:none;
+    border-radius: 2px;   
+    background-color: rgb(21, 21, 33);
+}
+.workshop h2{
+    text-align: center;
+}
+    
+
+#box{
+        float:left;
+        width: 33.3%;
+        border:1px solid grey;
+        padding:10px;
+        border-radius: 5px;
+        box-sizing:border-box;
+
+}
+.button-1{
+    color: grey;
+    font: 14px;
+    font-family: "Roboto","Arial",sans-serif;
+
+}
+.button-1:hover{
+    text-decoration: underline;
+}
+
+
+
+
+ 
