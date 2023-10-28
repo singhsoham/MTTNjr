@@ -132,8 +132,9 @@ th,td{
     
 }
 .table a:hover{
-    color:blue;
+    color:rgb(217, 255, 0);
     text-decoration:underline;
+    font: 20px bold;
 }
 
 #register{
@@ -143,5 +144,11 @@ th,td{
     text-shadow:#000000
 }
 
+.form{
+    margin: auto;
+    background:linear-gradient(to bottom, #1a1a1a, #3bcee8);
+
+    
+}
 
  
