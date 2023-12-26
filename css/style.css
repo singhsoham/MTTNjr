@@ -117,9 +117,6 @@ table{
     width:fit-content;
     border: 2px white solid;
     border-radius: 12px;
-
-    
-      
 }
 th{
     margin: 20px;
@@ -157,5 +154,76 @@ th,td{
 }
 .nicheka{
     text-align: center;
-}
+    }
  
+/* Calendar shit*/
+
+ul {
+    list-style: none;
+  }
+  
+.month {
+    padding: 70px 25px;
+    width: 95%;
+    background-color: rgb(15, 227, 210);
+    text-align: center;
+  }
+ /* .month ul {
+    margin: 0;
+    padding: 0;
+  }
+  .month ul li {
+    color: white;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+  } 
+  .month .prev{
+    float: left;
+    padding: 8px;
+  }
+  .month .next {
+    float: right;
+    padding-top: 8px;
+  }*/
+.container_calendar{
+    
+}
+.calendar {
+    background-color: antiquewhite;
+    margin-left: 10%;
+    width: 80%;
+    padding-left: 10%;
+    padding-right: 10%;
+    border-color: #FFFFFF;
+    border-width: 10px;
+
+}
+.month ul{
+    display: flex;
+    margin-right: 0px;
+    margin-left: 0px;
+    padding-left: 0px;
+    padding-top: 1px;
+    padding-bottom: 0px;
+    justify-content:space-between;
+
+}
+.month{
+    border-radius: 10px 10px 0px 0px;
+    
+}
+
+.weekdays{
+    margin-left: 2%;
+    margin-right: 2%;
+}
+.weekdays ul{
+    display: flex;
+    margin-right: 0px;
+    margin-left: 0px;
+    padding-left: 0px;
+    padding-top: 1;
+    justify-content:space-between;
+
+}

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Calendar</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: center;
+    }
+    th {
+      background-color: #f2f2f2;
+    }
+  </style>
+</head>
+<body>
+
+<h2>Simple Calendar</h2>
+
+<div>
+  <button onclick="changeMonth(-1)">Previous Month</button>
+  <span id="current-month-year"></span>
+  <button onclick="changeMonth(1)">Next Month</button>
+</div>
+
+<table id="calendar">
+  <thead>
+    <tr>
+      <th>Sun</th>
+      <th>Mon</th>
+      <th>Tue</th>
+      <th>Wed</th>
+      <th>Thu</th>
+      <th>Fri</th>
+      <th>Sat</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- Calendar days will be dynamically generated here -->
+  </tbody>
+</table>
+
+<script>
+  const calendarTable = document.getElementById("calendar");
+  const currentMonthYear = document.getElementById("current-month-year");
+
+  let currentDate = new Date();
+
+  function generateCalendar() {
+    // Clear existing rows
+    while (calendarTable.rows.length > 1) {
+      calendarTable.deleteRow(1);
+    }
+
+    const firstDayOfMonth = new Date(
+      currentDate.getFullYear(),
+      currentDate.getMonth(),
+      1
+    ).getDay();
+
+    const daysInMonth = new Date(
+      currentDate.getFullYear(),
+      currentDate.getMonth() + 1,
+      0
+    ).getDate(); 
+
+    let dayCount = 1;
+
+    for (let i = 0; i < 6; i++) {
+      const row = calendarTable.insertRow();
+      for (let j = 0; j < 7; j++) {
+        const cell = row.insertCell();
+        if ((i === 0 && j < firstDayOfMonth) || dayCount > daysInMonth) {
+          // Empty cells before the first day of the month and after the last day
+          cell.innerHTML = "";
+        } else {
+          cell.innerHTML = dayCount;
+          dayCount++;
+        }
+      }
+    }
+
+    // Update the current month and year display
+    const options = { month: "long", year: "numeric" };
+    currentMonthYear.textContent = currentDate.toLocaleDateString(
+      undefined,
+      options
+    );
+  }
+
+  function changeMonth(change) {
+    // Change the month by adding the specified number of months
+    currentDate.setMonth(currentDate.getMonth() + change);
+    generateCalendar();
+  }
+
+  // Generate the calendar on page load
+  generateCalendar();
+</script>
+
+</body>
+</html>
